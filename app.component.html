@@ -1,0 +1,28 @@
+<!-- add header with configured routerLink to router path defined in app-routing as
+active router link (active is bootstrap directive)-->
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a routerLink="employees" routerLinkActive="active" class="nav-link">Employee List</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="create-employee" routerLinkActive="active" class="nav-link">Add Employee</a>
+    </li>
+  </ul>
+</nav>
+
+<h1 class="text-center">{{title}}</h1>
+<div class="container">
+  <!--replace below employee-list with angular provided directive router-outlet which will
+  update our template to dynamically update our component based on our path adn the routes
+  defined in app-routing-->
+  <router-outlet></router-outlet>
+  <!--<app-employee-list></app-employee-list>-->
+</div>
+
+<!--add footer-->
+<footer class="footer">
+  <div class="container">
+    <span>All Rights Reserved 2021 @dino.io</span>
+  </div>
+</footer>
